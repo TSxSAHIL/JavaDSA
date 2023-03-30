@@ -5,7 +5,7 @@ public class Hash {
         maps.put("Indian", 120);
         maps.put("Russian", 12000);
         maps.put("Nepali", 20);
-
+        maps.put("African", 12450);
         System.out.println(maps);
         if(maps.containsKey("China")){
             System.out.println("Present in the Map");
@@ -13,9 +13,8 @@ public class Hash {
             System.out.println("Absent in the Map");
         }
         for(Map.Entry<String, Integer> e: maps.entrySet()){
-            System.out.println(e.getKey());
-            System.out.println(e.getValue());
+            System.out.println(e.getKey() + " " + e.getValue());
         }
-
+        
     }
 }
