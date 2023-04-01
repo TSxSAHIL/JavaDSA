@@ -15,6 +15,8 @@ public class Hash {
         for(Map.Entry<String, Integer> e: maps.entrySet()){
             System.out.println(e.getKey() + " " + e.getValue());
             System.out.println(e.getKey() + " " + e.getValue());
+            System.out.println(e.getKey() + " " + e.getValue());
+            System.out.println(e.getKey() + " " + e.getValue());
         }
         
     }
