@@ -7,6 +7,7 @@ public class Hash {
         maps.put("Russian", 12000);
         maps.put("Nepali", 20);
         maps.put("African", 12450);
+        maps.put("England", 124);
         System.out.println(maps);
         if(maps.containsKey("China")){
             System.out.println("Present in the Map");
