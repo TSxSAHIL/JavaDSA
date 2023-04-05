@@ -1,26 +1,29 @@
 import java.util.*;
+
 public class Hashing {
     public static void main(String[] args) {
-        int nums[] = {1,3,5,2,1,2,1,0,3,1,1,1,1,1,1};
-        majorityElement(nums);
+        int nums1[] = {7, 3, 9};
+        int nums2[] = {6, 3, 9, 2, 9, 4};
+        HashSet<Integer> result = majorityElement(nums1, nums2);
+        System.out.println(result);
     }
 
-    public static void majorityElement(int nums[]){
-        HashMap<Integer , Integer>  maps = new HashMap<>();
-        int n = nums.length;
-        for(int i = 0 ; i<nums.length ; i++){
-            if(maps.containsKey(nums[i])){
-                maps.put(nums[i] , maps.get(nums[i])+1);
-            }else{
-                maps.put(nums[i] , 1);
-            }
+    public static HashSet<Integer> majorityElement(int num1[], int num2[]) {
+        int n1 = num1.length;
+        int n2 = num2.length;
+        ArrayList<Integer> arr = new ArrayList<>();
+        for (int i = 0; i < n1; i++) {
+            arr.add(num1[i]);
         }
-        for(int key : maps.keySet()){
-            if(maps.get(key)>n/3){
-                System.out.println(key);
-            }
+        for (int i = 0; i < n2; i++) {
+            arr.add(num2[i]);
         }
+
+        HashSet<Integer> ans = new HashSet<>();
+        for (int i = 0; i < arr.size(); i++) {
+            ans.add(arr.get(i));
+        }
+
+        return ans;
     }
-
-
 }
