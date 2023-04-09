@@ -37,7 +37,7 @@ public class Trie {
         String words[] = {"the", "a", "there", "their", "any", "thee"};
         for (String word : words) {
             insert(word);
-            System.out.println("inserted  " + word);
+            System.out.println("inserted " + word);
         }
  
     }
