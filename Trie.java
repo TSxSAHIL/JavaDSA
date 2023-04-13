@@ -31,6 +31,21 @@ public class Trie {
         }
         curr.eow = true;
     }
+
+    public static boolean search(String key){
+        Node curr = root;
+        for(int i=0 ; i<key.length() ; i++){
+            int index = key.charAt(i) - 'a';
+            if(curr.children[index]==null){
+                return false;
+            }
+            if(i==key.length()-1 && curr.children[index].eow == false  ){
+                return false;
+            }
+            curr = curr.children[index];
+        }
+        return true;
+    }
  
 
     public static void main(String[] args) {
@@ -39,6 +54,8 @@ public class Trie {
             insert(word);
             System.out.println("inserted " + word);
         }
+        String key = "the" ;
+        System.out.println(search(key));
  
     }
 }
