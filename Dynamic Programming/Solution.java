@@ -1,26 +1,37 @@
 import java.util.*;
-public class Solution
-{
-    public static int maxLength(int arr[] , int n , int k){
-        int maxlength = 0 ;
-        for (int i = 0; i < n; i++) {
-            int sum = 0 ;
-            for(int j=0 ; j<n ; j++){
-                sum = sum + arr[j];
-                if(sum==k){
-                    maxlength = Math.max(maxlength, (j-i+1));
-                }
+public class Solution{
+    public static int[] rearrangeArray(int[] nums) {
+        int n = nums.length;
+        int ans[] = new int[n];
+
+        ArrayList<Integer> a1 = new ArrayList<>();
+        ArrayList<Integer> a2 = new ArrayList<>();
+
+        for(int i = 0 ; i<n ; i++){
+            if(nums[i]<0){
+                a1.add(nums[i]);
+            }
+            else{
+                a2.add(nums[i]);
             }
         }
-        return maxlength;
+        for(int i = 0 ; i<a1.size() ; i++){
+            if(i%2==0){
+                ans[i] = a2.get(i);
+            }
+        }
+        for(int i = a1.size() ; i<a1.size() + a2.size(); i++){
+            ans[i] = a2.get(i - a1.size());
+        }
+
+        return ans;
+
     }
 
     public static void main(String[] args) {
-        int n = 6;
-        int k = 15;
-        int arr[] = {10,5,2,7,1,9};
-        maxLength(arr, n, k);
-        System.out.println(maxLength(arr, n, k));
+        int nums[] = {3,1,-2,-5,2,-4};
+        rearrangeArray(nums);
+        System.out.println(rearrangeArray(nums));
     }
-}
 
+}
