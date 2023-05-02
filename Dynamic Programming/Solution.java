@@ -16,7 +16,7 @@ public class Solution{
             }
         }
         for(int i = 0 ; i<a1.size() ; i++){
-            if(i%2==0){
+            if(i%2==0 ){
                 ans[i] = a2.get(i);
             }
         }
@@ -31,6 +31,7 @@ public class Solution{
     public static void main(String[] args) {
         int nums[] = {3,1,-2,-5,2,-4};
         rearrangeArray(nums);
+        System.out.println(rearrangeArray(nums));
         System.out.println(rearrangeArray(nums));
     }
 
