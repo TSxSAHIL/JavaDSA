@@ -8,7 +8,7 @@ public class KnapSack_Recursion {
         if(wt[n-1] > W){
             return Math.max(val[n-1] + KnapSack(wt, val, W-wt[n-1], n), KnapSack(wt, val, W, n-1));
         }
-        else if(wt[n-1]>0){
+        else if(wt[n-1 ]>0){
             return KnapSack(wt, val, W, n-1);
         }
         return -1;
