@@ -1,5 +1,6 @@
 import java.util.*;
 //Rank 180 in Geeks For Geeks
+//180 -> 90
 public class Solution{
     public static int[] rearrangeArray(int[] nums) {
         int n = nums.length;
