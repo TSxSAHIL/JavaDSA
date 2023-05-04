@@ -1,4 +1,5 @@
 import java.util.*;
+//Rank 180 in Geeks For Geeks
 public class Solution{
     public static int[] rearrangeArray(int[] nums) {
         int n = nums.length;
@@ -20,7 +21,7 @@ public class Solution{
                 ans[i] = a2.get(i);
             }
         }
-        
+
         for(int i = a1.size() ; i<a1.size() + a2.size(); i++){
             ans[i] = a2.get(i - a1.size());
         }
