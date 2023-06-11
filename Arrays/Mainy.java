@@ -15,7 +15,7 @@ public class Mainy {
         Arrays.sort(t1);
         // System.out.println(t1);
         String t2 = new String(t1);
-        // System.out.println(t2);
+        System.out.println(t2);
 
         if(s2.equals(t2)){
             System.out.println("true");
