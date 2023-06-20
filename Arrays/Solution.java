@@ -22,7 +22,6 @@ class Solution {
             ans += time[i] *  res.get(i);
         }
 
-
         return ans;
 
     }
