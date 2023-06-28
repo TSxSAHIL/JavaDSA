@@ -15,6 +15,7 @@ public class Queue {
             else if(arr.get(i)<5){
                 total_time += 2;
             }
+            
         }
         System.out.println(arr);
 
