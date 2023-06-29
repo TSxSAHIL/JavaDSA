@@ -9,15 +9,16 @@ public class Queue {
         }
         int total_time = 0;
         for(int i = 0 ; i<arr.size() ; i++){
-            if(arr.get(i)>6){
+            if(arr.get(i)>=5){
                 total_time += 7;
                 arr.add(arr.get(i)-6);
             }
-            else if(arr.get(i)<=6){
+            else if(arr.get(i)<5){
                 total_time += 2;
             }
         }
+        System.out.println(arr);
 
-        System.out.println(total_time);
+        System.out.println("The Total Time is: " +total_time);
     }    
 }
