@@ -17,7 +17,6 @@ public class Queue {
             }
         }
         System.out.println(arr);
-
         System.out.println("The Total Time is: " +total_time);
     }    
 }
