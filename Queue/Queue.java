@@ -13,7 +13,6 @@ public class Queue {
                     arr.add(arr.get(i)-6);
                 }
             }
-            
         }
         for(int i = 0 ; i<arr.size() ; i++){
             if(arr.get(i)>=5){
