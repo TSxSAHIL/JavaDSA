@@ -14,15 +14,18 @@ public class Queue {
                 }
             }
         }
+        System.out.println(arr);
         for(int i = 0 ; i<arr.size() ; i++){
             if(arr.get(i)>=5){
                 total_time += 7;
+                System.out.print(total_time + " ");
             }
             else{
                 total_time += 2;
+                System.out.print(total_time+" ");
             }
         }
-        System.out.println(arr);
+        
         System.out.println(total_time);
     }    
 }
