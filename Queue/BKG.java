@@ -5,7 +5,6 @@ class BKG {
             if(!map.containKey(num)){
                 map.put(num, map.get(num) + 1);
             }
-            
             else{
                 map.put(num,1);
             }
