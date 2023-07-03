@@ -8,7 +8,6 @@ class SubSetSumDp {
         for (int i = 0; i <= n; i++)
             dp[i][0] = true;
 
-            
         // DP calculation
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= targetSum; j++) {
