@@ -21,7 +21,6 @@ class SubSetSumDp {
         // Return the result
         return dp[n][targetSum];
     }
-
     public static void main(String[] args) {
         int[] set = {3, 34, 4, 12, 5, 2};
         int targetSum = 60;
