@@ -3,7 +3,6 @@ class SubSetSumDp {
     public static boolean isSubsetSum(int[] set, int targetSum) {
         int n = set.length;
         boolean[][] dp = new boolean[n + 1][targetSum + 1];
-        // Base cases
         for (int i = 0; i <= n; i++)
             dp[i][0] = true;
         // DP calculation
