@@ -9,7 +9,6 @@ class BKG {
                 map.put(num,1);
             }
         }
-        
         ArrayList<Integer> list = new ArrayList<>();
         for (Integer key : map.keySet()) {
             value = map.get(key);
