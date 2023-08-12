@@ -24,4 +24,3 @@ class KnapSackTopDown {
         int maxProfit = knapsack(weights, values, capacity);
         System.out.println("Maximum profit: " + maxProfit);
     }
-}
