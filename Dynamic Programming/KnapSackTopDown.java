@@ -25,4 +25,3 @@ class KnapSackTopDown {
         System.out.println("Maximum profit: " + maxProfit);
     }
 }
-
