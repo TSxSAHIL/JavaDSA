@@ -16,7 +16,6 @@ class KnapSackTopDown {
         return dp[n][capacity];
     }
 
-    
     public static void main(String[] args) {
         int[] values = {10, 20, 30, 40};
         int[] weights = {30, 10, 40, 20};
