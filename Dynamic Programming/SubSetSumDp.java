@@ -20,7 +20,6 @@ class SubSetSumDp {
                 }
             }
         }
-
         // Return the result
         return dp[n][targetSum];
     }

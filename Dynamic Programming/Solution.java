@@ -33,9 +33,10 @@ public class Solution{
 
     public static void main(String[] args) {
         int nums[] = {3,1,-2,-5,2,-4};
-        rearrangeArray(nums);
-        System.out.println(rearrangeArray(nums));
-        System.out.println(rearrangeArray(nums));
+        int arr[] = rearrangeArray(nums);
+        for(int i = 0 ; i<arr.length ; i++){
+            System.out.print(arr[i] + " ");
+        }
     }
 
 }

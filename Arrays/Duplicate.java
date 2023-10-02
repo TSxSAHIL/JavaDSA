@@ -1,16 +1,22 @@
 import java.util.Arrays;
+import java.util.HashSet;
 
 public class Duplicate {
     public static void main(String[] args) {
-        int [] nums = {1,3,4,2,2};
-        int[] ans = new int[nums.length];
-        Arrays.sort(ans);
-        for(int i = 0 ; i<ans.length; i++){
-            if(ans[i]==ans[i+1]){
-                System.out.println(ans[i]);
-            }
-            
+        // Time Complexity -> O(n)
+        // Space Complexity -> O(n)
+        int [] nums = {1,3,4,2,33};
+        HashSet<Integer> set = new HashSet<>();
+        for(int num : nums){
+            set.add(num);
         }
-        System.out.println("0");
+        int n = nums.length;
+        int m = set.size();
+        if(n==m){
+            System.out.println("No Duplicates found in the array");
+        }
+        else{
+            System.out.println("Duplicates found in the array");
+        }
     }
 }

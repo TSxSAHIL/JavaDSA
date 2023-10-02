@@ -1,4 +1,4 @@
-package Trie;
+import java.util.*;
 public class Trie {
 
     static class Node{
