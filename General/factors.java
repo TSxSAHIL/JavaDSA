@@ -14,18 +14,3 @@ public class factors {
         }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
