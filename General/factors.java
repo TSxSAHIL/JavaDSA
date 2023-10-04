@@ -30,23 +30,3 @@ public class factors {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
