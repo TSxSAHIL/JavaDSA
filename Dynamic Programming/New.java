@@ -1,5 +1,4 @@
 // Queue using two stacks
-
 public class New{
     public static void main(String[] args) {
         int[] arr = {3, 4, 2, 1, 2, 1};
