@@ -1,24 +1,28 @@
-// Queue using two stacks
+import java.util.*;
 
-
-public class New{
-    public static void main(String[] args) {
-        int[] arr = {3, 4, 2, 1, 2, 1};
-        int n = arr.length;
-        System.out.println(FrogJumps(arr, n));
-    }
-
-    public static int FrogJumps(int[] arr, int n){
-        int[] dp = new int[n];
-        dp[0] = 0;
-        for(int i = 1; i < n; i++){
-            dp[i] = Integer.MAX_VALUE;
-            for(int j = 0; j < i; j++){
-                if(arr[j] + j >= i){
-                    dp[i] = Math.min(dp[i], dp[j] + 1);
+class Solution {
+    public List<Integer> lastVisitedIntegers(List<String> words) {
+        List<Integer> nums = new ArrayList<>();
+        List<Integer> result = new ArrayList<>();
+        int k = 0;
+        for (String word : words) {
+            if (word.equals("prev")) {
+                if (k >= nums.size()) {
+                    result.add(-1);
+                } else {
+                    int lastVisited = nums.get(nums.size() - k - 1);
+                    result.add(lastVisited);
                 }
+                k++;
+            } else {
+                int num = Integer.parseInt(word);
+                nums.add(num);
+                result.add(num);
+                k = 0;
             }
         }
-        return dp[n-1];
+        return result;
     }
 }
+
+
