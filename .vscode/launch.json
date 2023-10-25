@@ -2,6 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "Box",
+      "request": "launch",
+      "mainClass": "OOPS.Inheritance.Box",
+      "projectName": "JAVA + DSA_713dd916"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",

@@ -39,7 +39,8 @@ class Box {
         Weight weight =  new Weight(2,3,4,5);
         System.out.println(weight.h + " " + weight.l+ " " + weight.w + " "+weight.we);
 
-        
+        Box box  =  new Weight(2,3,4,5);
+        System.out.println(box.w + box.h + box.l);
     }
 }
 
@@ -52,7 +53,14 @@ class Weight extends Box{
         super(l,h,w); //call the parent class constructor
         // used to initialize values present in parent class 
         this.we = we;
+        System.out.println(super.w);
+        // we are using this super because if the child class also has a parameter called w then it might be a confusion for the user.
     }
 
+    Weight(Weight other){
+        super(other);
+        we = other.we;
+
+    }
 }
 
