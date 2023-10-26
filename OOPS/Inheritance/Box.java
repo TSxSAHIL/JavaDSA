@@ -38,6 +38,7 @@ class Box {
         Box b1 = new Box(4,5.6,0.3);
         // Box b2 = new Box(b1);
         b1.greeting();
+        //you can inherit but you cannot override
         // System.out.println((int)b1.l + " " + (int)b1.h + " " +(int) b1.w);
 
         Weight weight =  new Weight(2,3,4,5);
