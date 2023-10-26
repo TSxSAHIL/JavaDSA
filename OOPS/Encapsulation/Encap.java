@@ -4,4 +4,8 @@
 
     -> Example 
     -> Starting of a car (how the engine mechanism is working we dont care it is abstraction)
+    Abstraction -> design level issue
+    Encapsulation -> implementation level issue
+
+    
  */
