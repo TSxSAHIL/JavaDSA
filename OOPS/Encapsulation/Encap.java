@@ -8,3 +8,9 @@
     -> Encapsulation -> implementation level issue (Process of containing info)
 
  */
+
+/*
+    -> Data Hiding is focused on data security.
+    -> Encapsulation is focused on hiding complexity of system.
+    -> encapsulation is a sub process in data hiding.
+ */
