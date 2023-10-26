@@ -2,6 +2,9 @@ class Box {
     double l;
     double h;
     double w;
+    static void greeting(){
+        System.out.println("i am in box greeting");
+    }
 
     Box(){
         this.h = -1;
@@ -34,16 +37,17 @@ class Box {
     public static void main(String[] args) {
         Box b1 = new Box(4,5.6,0.3);
         // Box b2 = new Box(b1);
-        System.out.println((int)b1.l + " " + (int)b1.h + " " +(int) b1.w);
+        b1.greeting();
+        // System.out.println((int)b1.l + " " + (int)b1.h + " " +(int) b1.w);
 
         Weight weight =  new Weight(2,3,4,5);
-        System.out.println((int)weight.h + " " + (int)weight.l+ " " + (int)weight.w + " "+(int)weight.we);
+        // System.out.println((int)weight.h + " " + (int)weight.l+ " " + (int)weight.w + " "+(int)weight.we);
 
         Box box  =  new Weight(2,3,4,5);
-        System.out.println((int)box.w + (int)box.h + (int)box.l);
+        // System.out.println((int)box.w + (int)box.h + (int)box.l);
 
         Price price = new Price(0.5, 55, 45, 4201, 12);
-        System.out.println((int)price.cost + " " + (int)price.h + " " + (int)price.l + " " + (int)price.we+ " " +(int)price.w);
+        // System.out.println((int)price.cost + " " + (int)price.h + " " + (int)price.l + " " + (int)price.we+ " " +(int)price.w);
     }
 }
 //Single Level Inheritance

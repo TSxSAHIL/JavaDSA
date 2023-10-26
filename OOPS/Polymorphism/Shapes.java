@@ -32,6 +32,8 @@
     //hence which method will be called depends on This is known as Upcasting.
     This is overriding
     This is how overriding works
+
+    Dynamic Method dispatch
 */
 
 public class Shapes {
@@ -55,7 +57,8 @@ public class Shapes {
 class Circle extends Shapes {
     // this will run when object of circle is created
     // hence it is overriding the parent method
-    @Override // this is called annotation
+     // this is called annotation
+    @Override
     void area() {
         System.out.println("Area is pi * r * r");
     }
@@ -72,7 +75,3 @@ class Rectangle extends Shapes {
         System.out.println("Area is l * b");
     }
 }
-
-/* 
-    Dynamic Method dispatch
- */

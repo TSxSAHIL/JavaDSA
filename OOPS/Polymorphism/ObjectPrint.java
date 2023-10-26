@@ -10,5 +10,7 @@ public class ObjectPrint {
     public static void main(String[] args) {
         ObjectPrint obj = new ObjectPrint(69);
         System.out.println(obj);
+        final int a = 10;
+        System.out.println(a);
     }
 }
