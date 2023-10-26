@@ -85,12 +85,17 @@ class Price extends Weight{
 
 //Multiple Inheritance isnt allowed in java because ambiguity arises.
 
-
 //Hierarchial Inheritance -> One Class Inherited with Multiple classes
-
 /*
             A
         ____|____
        |    |    |
        B    C    D
+ */
+
+
+/*
+    Hybrid Inheritence -> Combination of single and multiple Inheritance
+    Not in Java 
+    can be done using interfaces
  */
