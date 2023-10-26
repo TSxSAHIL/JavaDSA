@@ -1,7 +1,7 @@
 // Polymorphism -> Poly means many and morphism mean ways to represent
 
 /* 
-    If a language does'nt support ploymorphsim  its not an OOP
+    If a language does'nt support polymorphsim  its not an OOP
     Act of representing the same thing in multiple ways
 
     Types of Polymorphism 
@@ -28,18 +28,22 @@
     This will look for which constructor to call at compile time
 
     2.  Runtime Polymorphism / Dynamic Polymorphism -> Achieved by method overriding 
+    Parent obj = new Parent();
+    //hence which method will be called depends on This is known as Upcasting.
+    This is overriding
 */
 
 public class Shapes {
     void area() {
         System.out.println("I am in Shapes");
     }
+
     public static void main(String[] args) {
         Shapes s = new Shapes();
         Circle c = new Circle();
         Triangle t = new Triangle();
         Rectangle r = new Rectangle();
-        
+
         s.area();
         t.area();
         r.area();
@@ -48,7 +52,7 @@ public class Shapes {
 }
 
 class Circle extends Shapes {
-    // this will run when object of circle is created 
+    // this will run when object of circle is created
     // hence it is overriding the parent method
     @Override // this is called annotation
     void area() {
