@@ -72,3 +72,7 @@ class Rectangle extends Shapes {
         System.out.println("Area is l * b");
     }
 }
+
+/* 
+    Dynamic Method dispatch
+ */
