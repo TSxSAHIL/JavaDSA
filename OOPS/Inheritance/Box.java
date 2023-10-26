@@ -34,13 +34,16 @@ class Box {
     public static void main(String[] args) {
         Box b1 = new Box(4,5.6,0.3);
         // Box b2 = new Box(b1);
-        System.out.println(b1.l + " " + b1.h + " " + b1.w);
+        System.out.println((int)b1.l + " " + (int)b1.h + " " +(int) b1.w);
 
         Weight weight =  new Weight(2,3,4,5);
-        System.out.println(weight.h + " " + weight.l+ " " + weight.w + " "+weight.we);
+        System.out.println((int)weight.h + " " + (int)weight.l+ " " + (int)weight.w + " "+(int)weight.we);
 
         Box box  =  new Weight(2,3,4,5);
-        System.out.println(box.w + box.h + box.l);
+        System.out.println((int)box.w + (int)box.h + (int)box.l);
+
+        Price price = new Price(0.5, 55, 45, 4201, 12);
+        System.out.println((int)price.cost + " " + (int)price.h + " " + (int)price.l + " " + (int)price.we+ " " +(int)price.w);
     }
 }
 
@@ -53,7 +56,7 @@ class Weight extends Box{
         super(l,h,w); //call the parent class constructor
         // used to initialize values present in parent class 
         this.we = we;
-        System.out.println(super.w);
+        System.out.println((int)super.w);
         // we are using this super because if the child class also has a parameter called w then it might be a confusion for the user.
     }
 
@@ -64,3 +67,18 @@ class Weight extends Box{
     }
 }
 
+class Price extends Weight{
+    double cost;
+    Price(){
+        super();
+        this.cost = 1;
+    }
+    Price(Price other){
+        super(other);
+        this.cost = other.cost;
+    }
+    Price(double l , double h , double w , double we , double cost){
+        super(h, l, w, we);
+        this.cost = cost;
+    }
+}
