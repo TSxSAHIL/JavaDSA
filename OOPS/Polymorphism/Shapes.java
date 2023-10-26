@@ -8,11 +8,27 @@
     1. Compile Time Polymorphism or Static Polymorphism -> This can be achieved via method overloading
     -> Same name of method but types, arguments and return types can be different
     *Example Multiple Constructors* ->
-    A a = new A();
-    A b = new A(3,4);
+    public class Numbers {
+        void sum(int a ,  int b){
+            System.out.println(a+b);
+        }
+        void sum(int a , int b, int c){
+            System.out.println(a+b+c);
+        }
+        public static void main(String[] args) {
+            int a = 10;
+            int b = 2;
+            int c = 4;
+            
+            Numbers n = new Numbers();
+            n.sum(a, b, c);
+            n.sum(a, b);
+        }
+    }
+
     This will look for which constructor to call at compile time
 
-    2.  
+    2.  Runtime Polymorphism -> 
 */
 
 public class Shapes {
