@@ -31,6 +31,7 @@
     Parent obj = new Parent();
     //hence which method will be called depends on This is known as Upcasting.
     This is overriding
+    This is how overriding works
 */
 
 public class Shapes {
