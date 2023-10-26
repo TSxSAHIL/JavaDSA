@@ -46,7 +46,7 @@ class Box {
         System.out.println((int)price.cost + " " + (int)price.h + " " + (int)price.l + " " + (int)price.we+ " " +(int)price.w);
     }
 }
-
+//Single Level Inheritance
 class Weight extends Box{
     double we;
     public Weight(){
@@ -66,7 +66,7 @@ class Weight extends Box{
 
     }
 }
-
+//Multi Level Inheritance
 class Price extends Weight{
     double cost;
     Price(){
@@ -82,3 +82,15 @@ class Price extends Weight{
         this.cost = cost;
     }
 }
+
+//Multiple Inheritance isnt allowed in java because ambiguity arises.
+
+
+//Hierarchial Inheritance -> One Class Inherited with Multiple classes
+
+/*
+            A
+        ____|____
+       |    |    |
+       B    C    D
+ */
