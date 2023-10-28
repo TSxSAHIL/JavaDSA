@@ -1,10 +1,7 @@
+package BinaryTree;
 import java.util.Scanner;
 
-class BinaryTree {
-
-  public BinaryTree() {
-
-  }
+class BinarySearchTree {
 
   private static class Node {
     int value;
@@ -18,37 +15,31 @@ class BinaryTree {
 
   private Node root;
 
-  // insert elements
-  public void populate(Scanner scanner) {
-    System.out.println("Enter the root Node: ");
-    int value = scanner.nextInt();
-    root = new Node(value);
-    populate(scanner, root);
+  public BinarySearchTree() {
+    root = null;
   }
 
-  private void populate(Scanner scanner, Node node) {
-    System.out.println("Do you want to enter left of " + node.value);
-    boolean left = scanner.nextBoolean();
-    if (left) {
-      System.out.println("Enter the value of the left of " + node.value);
-      int value = scanner.nextInt();
-      node.left = new Node(value);
-      populate(scanner, node.left);
+  // Insert elements
+  public void insert(int value) {
+    root = insert(root, value);
+  }
+
+  private Node insert(Node node, int value) {
+    if (node == null) {
+      return new Node(value);
     }
 
-    System.out.println("Do you want to enter right of " + node.value);
-    boolean right = scanner.nextBoolean();
-    if (right) {
-      System.out.println("Enter the value of the right of " + node.value);
-      int value = scanner.nextInt();
-      node.right = new Node(value);
-      populate(scanner, node.right);
+    if (value < node.value) {
+      node.left = insert(node.left, value);
+    } else if (value > node.value) {
+      node.right = insert(node.right, value);
     }
 
+    return node;
   }
 
   public void display() {
-    display(this.root, "");
+    display(root, "");
   }
 
   private void display(Node node, String indent) {
@@ -96,29 +87,51 @@ class BinaryTree {
   }
 
   public void inOrder() {
-    preOrder(root);
+    inOrder(root);
   }
 
   private void inOrder(Node node) {
     if (node == null) {
       return;
     }
-    preOrder(node.left);
+    inOrder(node.left);
     System.out.print(node.value + " ");
-    preOrder(node.right);
+    inOrder(node.right);
   }
 
   public void postOrder() {
-    preOrder(root);
+    postOrder(root);
   }
 
   private void postOrder(Node node) {
     if (node == null) {
       return;
     }
-    preOrder(node.left);
-    preOrder(node.right);
+    postOrder(node.left);
+    postOrder(node.right);
     System.out.print(node.value + " ");
   }
+  public static void main(String[] args) {
+    BinarySearchTree tree = new BinarySearchTree();
+    int[] nums = { 5, 2, 7, 1, 4, 6, 9, 8, 3, 10 };
 
+    for (int num : nums) {
+      tree.insert(num);
+    }
+
+    System.out.println("Displaying the tree:");
+    tree.display();
+
+    System.out.println("Pretty Display:");
+    tree.prettyDisplay();
+
+    System.out.println("Pre-order Traversal:");
+    tree.preOrder();
+
+    System.out.println("\nIn-order Traversal:");
+    tree.inOrder();
+
+    System.out.println("\nPost-order Traversal:");
+    tree.postOrder();
+  }
 }
