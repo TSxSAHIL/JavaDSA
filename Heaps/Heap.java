@@ -88,16 +88,15 @@ class Heap <T extends Comparable<T>>{
     }
 
     public static void main(String[] args) throws Exception{
+        int arr[] = {4,1,3,2,16,9,10,14,9,7};
         Heap<Integer> heap = new Heap<>();
-        heap.insert(34);
-        heap.insert(45);
-        heap.insert(56);
-        heap.insert(22);
-        heap.insert(76);
 
-        ArrayList<Integer> list = heap.heapSort();
+        for(int i = 0 ; i<arr.length ; i++){
+            heap.insert(arr[i]);
+        }
+        System.out.println(heap.remove());
+        ArrayList list = heap.heapSort();
         System.out.println(list);
 
-        
     }
 }
