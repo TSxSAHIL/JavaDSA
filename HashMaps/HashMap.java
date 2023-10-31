@@ -17,7 +17,9 @@
 
     Size of table -> m = theta(n)
     Idea -> Start small then grow
+
     
+
 */
 class HashMap {
 
