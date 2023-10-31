@@ -18,9 +18,14 @@
     Size of table -> m = theta(n)
     Idea -> Start small then grow
 
-    
-
 */
-class HashMap {
-
+import java.util.*;
+class HashMaps {
+    public static void main(String[] args) {
+        HashMap<String,Integer> map = new HashMap<>();
+        map.put("Kunal" , 99);
+        map.put("Karan" , 0);
+        System.out.println(map.get("Karan"));
+        System.out.println(map.containsKey("Kunal"));
+    }
 }
