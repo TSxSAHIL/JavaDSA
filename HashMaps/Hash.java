@@ -21,6 +21,12 @@ class Hash {
         }
         return null;
     }
+    public void remove(String key){
+        int hash = Math.abs(key.hashCode()%entities.length);
+        if(entities[hash] != null && entities[hash].key.equals(key)) {
+            entities[hash] = null;
+        }
+    }
 
     private class Entity{
         String key;
