@@ -8,7 +8,17 @@
     1. Chaining 
     2. Open Addressing
 
- */
-class HashMap {
+    HashFunctions 
+    1. Division Method -> h(k) = k%m;
+    2. Multiplication Methid
+
+    Universal Hashing ->  h(k) = [(ak+b)%p]%m 
+    Using this the prob that P[h(k1) = h(k2)] = 1/m
+
+    Size of table -> m = theta(n)
+    Idea -> Start small then grow
     
+*/
+class HashMap {
+
 }
